@@ -16,6 +16,18 @@ Today we are going to create a tool that allows us to look up a github user via 
 - In our app.js file, let's create a new Angular module named github-api
 - Link the new module in our controller.js and service.js files
 
+With the basic GitHub API each IP can only make 50 requests per hour. That doesn't really work since we're all on the same IP at class. In order to remedy this, we will need to use an authenticated app with GitHub. We have made one for you, so add this to the top of your service:
+
+``` javascript
+  var id = "myCLientID";
+  var sec = "mySecretKeyThing";
+  var param = "?client_id=" + id + "&client_secret=" + sec;
+```
+
+The keys for the app will be given during class, or you can create your own app and get your own keys! :) 
+
+
+
 ## Github API
 Next we want to get acquainted with the GitHub API documentation located at https://developer.github.com/v3/.
 
@@ -101,8 +113,7 @@ Now, we should be getting some ugly looking JSON in our view when we search for 
 
 ## Filling out the rest of our app
 
-Go through the GitHub API documentation and find other endpoints that you would want to hit in order to get deeper data sets. Also, take some time to build you the view of your app. Doing things like <h1>{{user.name}}</h1> will help you create a readable and user-friendly interface!
-
+Go through the GitHub API documentation and find other endpoints that you would want to hit in order to get deeper data sets. Also, take some time to build out the view of your app. Doing things like <h1>{{user.name}}</h1> will help you create a readable and user-friendly interface!
 
 
 

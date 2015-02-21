@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html ng-app="github-api">
+  <head>
+    <title>GitHub - API</title>
+  </head>
+
+<body class="logged_in  env-production macintosh  page-profile">
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+    <div class="wrapper">
+      
+      
+      
+      
+
+
+      <div class="header header-logged-in true" role="banner">
+  <div class="container clearfix">
+
+    <a class="header-logo-invertocat" href="https://github.com/" data-hotkey="g d" aria-label="Homepage" data-ga-click="Header, go to dashboard, icon:logo">
+  <span class="mega-octicon octicon-mark-github"></span>
+</a>
+
+
+      <div class="site-search  js-site-search" role="search">
+          <form accept-charset="UTF-8" action="/search" class="js-site-search-form" data-global-search-url="/search" data-repo-search-url="" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+  <input type="text"
+    class=""
+    data-hotkey="s"
+    name="q"
+    placeholder="Search GitHub"
+    data-global-scope-placeholder="Search GitHub"
+    data-repo-scope-placeholder="Search"
+    tabindex="1"
+    autocapitalize="off">
+  <div class="scope-badge">This repository</div>
+</form>
+      </div>
+      <ul class="header-nav left" role="navigation">
+        <li class="header-nav-item explore">
+          <a class="header-nav-link" href="/explore" data-ga-click="Header, go to explore, text:explore">Explore</a>
+        </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://gist.github.com" data-ga-click="Header, go to gist, text:gist">Gist</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="/blog" data-ga-click="Header, go to blog, text:blog">Blog</a>
+          </li>
+        <li class="header-nav-item">
+          <a class="header-nav-link" href="https://help.github.com" data-ga-click="Header, go to help, text:help">Help</a>
+        </li>
+      </ul>
+
+    
+<ul class="header-nav user-nav right" id="user-links">
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link name" href="/mframpton21" data-ga-click="Header, go to profile, text:username">
+      <img alt="Michael Frampton" class="avatar" data-user="9704843" height="20" src="https://avatars2.githubusercontent.com/u/9704843?v=3&amp;s=40" width="20" />
+      <span class="css-truncate">
+        <span class="css-truncate-target">mframpton21</span>
+      </span>
+    </a>
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link js-menu-target tooltipped tooltipped-s" href="#" aria-label="Create new..." data-ga-click="Header, create new, icon:add">
+      <span class="octicon octicon-plus"></span>
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      
+<ul class="dropdown-menu">
+  <li>
+    <a href="/new" data-ga-click="Header, create new repository, icon:repo"><span class="octicon octicon-repo"></span> New repository</a>
+  </li>
+  <li>
+    <a href="/organizations/new" data-ga-click="Header, create new organization, icon:organization"><span class="octicon octicon-organization"></span> New organization</a>
+  </li>
+
+
+</ul>
+
+    </div>
+  </li>
+
+  <li class="header-nav-item">
+        <a href="/notifications" aria-label="You have no unread notifications" class="header-nav-link notification-indicator tooltipped tooltipped-s" data-ga-click="Header, go to notifications, icon:read" data-hotkey="g n">
+        <span class="mail-status all-read"></span>
+        <span class="octicon octicon-inbox"></span>
+</a>
+  </li>
+
+  <li class="header-nav-item">
+    <a class="header-nav-link tooltipped tooltipped-s" href="/settings/profile" id="account_settings" aria-label="Settings" data-ga-click="Header, go to settings, icon:settings">
+      <span class="octicon octicon-gear"></span>
+    </a>
+  </li>
+
+  <li class="header-nav-item">
+    <form accept-charset="UTF-8" action="/logout" class="logout-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="z4BJOVGRoSyTpBYX2T4yRaop7c8MBwkOXUP8KvJQXf0Pe1zn+vWnC2HySqTIv+LsEnkLzjO9sOGB4biZ3jASwg==" /></div>
+      <button class="header-nav-link sign-out-button tooltipped tooltipped-s" aria-label="Sign out" data-ga-click="Header, sign out, icon:logout">
+        <span class="octicon octicon-sign-out"></span>
+      </button>
+</form>  </li>
+
+</ul>
+
+
+    
+  </div>
+</div>
+
+      
+
+        
+
+
+      <div id="start-of-content" class="accessibility-aid"></div>
+        <div class="site clearfix" role="main">
+
+          <div id="site-container" class="context-loader-container" data-pjax-container>
+            
+            
+
+<div class="container">
+  <div class="columns profilecols js-username" data-name="octocat">
+    <div class="column one-fourth vcard" itemscope itemtype="http://schema.org/Person">
+        <a href="https://avatars3.githubusercontent.com/u/583231?v=3&amp;s=400" aria-hidden="true" class="vcard-avatar" itemprop="image"><img alt="" class="avatar" data-user="583231" height="230" src="https://avatars1.githubusercontent.com/u/583231?v=3&amp;s=460" width="230" /></a>
+
+      <h1 class="vcard-names">
+  <span class="vcard-fullname" itemprop="name">The Octocat</span>
+  <span class="vcard-username" itemprop="additionalName">octocat</span>
+</h1>
+
+
+
+<ul class="vcard-details">
+      <li class="vcard-detail" itemprop="worksFor"><span class="octicon octicon-organization"></span>GitHub</li>
+
+  <li class="vcard-detail" itemprop="homeLocation"><span class="octicon octicon-location"></span>San Francisco</li>
+    <li class="vcard-detail"><span class="octicon octicon-mail"></span><a class="email" href="mailto:&#x6f;&#x63;&#x74;&#x6f;&#x63;&#x61;&#x74;&#x40;&#x67;&#x69;&#x74;&#x68;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#x6d;">&#x6f;&#x63;&#x74;&#x6f;&#x63;&#x61;&#x74;&#x40;&#x67;&#x69;&#x74;&#x68;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#x6d;</a></li>
+  <li class="vcard-detail" itemprop="url"><span class="octicon octicon-link"></span><a href="http://www.github.com/blog" class="url" rel="nofollow me">http://www.github.com/blog</a></li>
+  <li class="vcard-detail"><span class="octicon octicon-clock"></span><span class="join-label">Joined on </span><time class="join-date" datetime="2011-01-25T18:44:36Z" day="numeric" is="local-time" month="short" year="numeric">Jan 25, 2011</time></li>
+</ul>
+
+
+      <div class="vcard-stats">
+        <a class="vcard-stat" href="/octocat/followers">
+          <strong class="vcard-stat-count">901</strong>
+          <span class="text-muted">Followers</span>
+        </a>
+        <a class="vcard-stat" href="/stars/octocat">
+          <strong class="vcard-stat-count">2</strong>
+          <span class="text-muted">Starred</span>
+        </a>
+        <a class="vcard-stat" href="/octocat/following">
+          <strong class="vcard-stat-count">6</strong>
+          <span class="text-muted">Following</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="column three-fourths">
+
+
+      <div class="tabnav">
+          <div class="tabnav-right">
+                <span class="user-following-container js-toggler-container js-social-container ">
+
+    <span class="follow">
+      <form accept-charset="UTF-8" action="/users/follow?target=octocat" class="js-toggler-form js-follow-button" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XQ6VqceV5BWfEXkhCdmz52Gd5MPrqh+bYDdeRsNEfQ8WQ7Aij3zNsoyy8t5tHJ5ny3/QGQe6jVzr6PgD821SmA==" /></div>
+        <button
+          class="minibutton primary js-toggler-target"
+          aria-label="Follow this person" title="Follow octocat">
+          <span class="octicon octicon-person"></span>
+          Follow
+        </button>
+</form>    </span>
+
+    <span class="unfollow">
+      <form accept-charset="UTF-8" action="/users/unfollow?target=octocat" class="js-toggler-form" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="0Z4cw1rn7yj63FbAFt8ZOPD5Y2//7OosNSrIq4AYiKxxcttjnaMf1QEgUXtATIIutw5+SFG5stGmbJBIE1Qz/g==" /></div>
+        <button
+          class="minibutton js-toggler-target js-unfollow-button"
+          aria-label="Unfollow this person" title="Unfollow octocat">
+          <span class="octicon octicon-person"></span>
+          Unfollow
+        </button>
+</form>    </span>
+  </span>
+
+
+
+                <div class="select-menu js-menu-container js-select-menu tabnav-widget user-actions">
+
+                  <span class="minibutton select-menu-button icon-only js-menu-target" role="button" aria-haspopup="true" aria-label="Report or block user">
+                    <span class="octicon octicon-stop"></span>
+                  </span>
+
+                  <div class="select-menu-modal-holder js-menu-content js-navigation-container" aria-hidden="true">
+                    <div class="select-menu-modal">
+                      <div class="select-menu-header">
+                        <span class="select-menu-title">User actions</span>
+                        <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+                      </div>
+
+                      <div class="select-menu-list">
+
+                        <div class="select-menu-item js-navigation-item">
+                          <a href="/account/ignore_user/octocat" class="select-menu-item-text js-navigation-open" data-method="post">Block User</a>
+                        </div>
+
+                        <div class="select-menu-item js-navigation-item">
+                          <a href="/contact?report=octocat" class="select-menu-item-text js-navigation-open">Report Abuse</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+          </div>
+
+        <ul class="tabnav-tabs" data-pjax role="navigation">
+          <li data-tab="contributions">
+            <a href="/octocat" class="tabnav-tab selected">
+              <span class="octicon octicon-diff-added"></span>
+              Contributions
+            </a>
+          </li>
+          <li data-tab="repo">
+            <a href="/octocat?tab=repositories" class="tabnav-tab ">
+              <span class="octicon octicon-repo"></span>
+              Repositories
+            </a>
+          </li>
+          <li data-tab="activity">
+            <a href="/octocat?tab=activity" class="tabnav-tab ">
+              <span class="octicon octicon-rss"></span>
+              Public activity
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tab-content js-repo-filter">
+          <div class="contributions-tab">
+
+  <div class="columns popular-repos">
+    <div class="single-column">
+
+      <div class="boxed-group flush">
+        <h3>Popular repositories</h3>
+        <ul class="boxed-group-inner mini-repo-list">
+              <li class="public source ">
+      <a href="/octocat/Spoon-Knife" class="mini-repo-list-item css-truncate">
+        <span class="repo-icon octicon octicon-repo"></span>
+      <span class="repo-and-owner css-truncate-target">
+<span class="repo" title="Spoon-Knife">Spoon-Knife</span>
+      </span>
+      <span class="stars">
+        9,724
+        <span class="octicon octicon-star"></span>
+      </span>
+      <span class="repo-description css-truncate-target">This repo is for demonstration purposes only.</span>
+    </a>
+  </li>
+  <li class="public source ">
+      <a href="/octocat/Hello-World" class="mini-repo-list-item css-truncate">
+        <span class="repo-icon octicon octicon-repo"></span>
+      <span class="repo-and-owner css-truncate-target">
+<span class="repo" title="Hello-World">Hello-World</span>
+      </span>
+      <span class="stars">
+        1,400
+        <span class="octicon octicon-star"></span>
+      </span>
+      <span class="repo-description css-truncate-target">This your first repo!</span>
+    </a>
+  </li>
+  <li class="public source ">
+      <a href="/octocat/hello-worId" class="mini-repo-list-item css-truncate">
+        <span class="repo-icon octicon octicon-repo"></span>
+      <span class="repo-and-owner css-truncate-target">
+<span class="repo" title="hello-worId">hello-worId</span>
+      </span>
+      <span class="stars">
+        8
+        <span class="octicon octicon-star"></span>
+      </span>
+      <span class="repo-description css-truncate-target">My first repository on GitHub.</span>
+    </a>
+  </li>
+  <li class="public source no-description">
+      <a href="/octocat/octocat.github.io" class="mini-repo-list-item css-truncate">
+        <span class="repo-icon octicon octicon-repo"></span>
+      <span class="repo-and-owner css-truncate-target">
+<span class="repo" title="octocat.github.io">octocat.github.io</span>
+      </span>
+      <span class="stars">
+        6
+        <span class="octicon octicon-star"></span>
+      </span>
+      <span class="repo-description css-truncate-target"></span>
+    </a>
+  </li>
+  <li class="public source ">
+      <a href="/octocat/git-consortium" class="mini-repo-list-item css-truncate">
+        <span class="repo-icon octicon octicon-repo"></span>
+      <span class="repo-and-owner css-truncate-target">
+<span class="repo" title="git-consortium">git-consortium</span>
+      </span>
+      <span class="stars">
+        4
+        <span class="octicon octicon-star"></span>
+      </span>
+      <span class="repo-description css-truncate-target">This repo is for demonstration purposes only.</span>
+    </a>
+  </li>
+
+        </ul>
+      </div>
+    </div>
+
+    </div>
+  </div>
+
+  <div class="boxed-group flush">
+      <h3>
+          Public contributions
+      </h3>
+    <div id="contributions-calendar" class="boxed-group-inner">
+      <div class="js-calendar-graph is-graph-loading graph-canvas calendar-graph"
+          
+          >
+          <include-fragment class="activity" src="/users/octocat/contributions">
+            <img class="graph-loading dots" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-128-338974454bb5c32803e82f601beb051d373744b024fe8742a76009700fd7e033.gif" width="64" alt="">
+          </include-fragment>
+      </div>
+      <div class="contrib-footer clearfix">
+        <div class="left text-muted">
+            Summary of Pull Requests, issues opened, and commits.
+          <a href="https://help.github.com/articles/why-are-my-contributions-not-showing-up-on-my-profile" class="tooltipped tooltipped-s" aria-label="Are your commits not showing up? This guide helps fix missing commits.">
+            Learn more</a>.
+        </div>
+        <div class="contrib-legend" title="A summary of pull requests, issues opened, and commits to the default and gh-pages branches.">
+          <span>Less</span>
+          <ul class="legend">
+            <li style="background-color: #eee"></li>
+            <li style="background-color: #d6e685"></li>
+            <li style="background-color: #8cc665"></li>
+            <li style="background-color: #44a340"></li>
+            <li style="background-color: #1e6823"></li>
+          </ul>
+          <span>More</span>
+        </div>
+      </div>
+
+        <div class="contrib-column contrib-column-first table-column">
+          <span class="text-muted">Contributions in the last year</span>
+          <span class="contrib-number">11 total</span>
+          <span class="text-muted">Feb 21, 2014 &ndash; Feb 21, 2015</span>
+        </div>
+        <div class="contrib-column table-column">
+          <span class="text-muted">Longest streak</span>
+            <span class="contrib-number">2 days</span>
+            <span class="text-muted">
+              June 10 &ndash;
+              June 11
+              </span>
+        </div>
+        <div class="contrib-column table-column">
+          <span class="text-muted">Current streak</span>
+            <span class="contrib-number">0 days</span>
+            <span class="text-muted">Last contributed <time datetime="2014-06-11T07:00:00Z" is="time-ago">Jun 11, 2014</time></span>
+        </div>
+    </div>
+  </div>
+
+  <div class="activity-listing contribution-activity js-contribution-activity">
+    
+<div class="select-menu right js-menu-container js-select-menu js-period-container">
+  <span class="minibutton select-menu-button js-menu-target" role="button" aria-haspopup="true">
+    <i>Period:</i>
+    <span class="js-select-button">1 week</span>
+  </span>
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" aria-hidden="true">
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Filter activity</span>
+        <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+      </div>
+      <div class="select-menu-list" role="menu">
+        <div class="select-menu-item js-navigation-item " role="menuitem">
+          <input id="period_daily" name="period" type="radio" value="daily" />
+          <span class="select-menu-item-icon octicon octicon-check"></span>
+          <div class="select-menu-item-text js-select-button-text">1 day</div>
+        </div>
+        <div class="select-menu-item js-navigation-item " role="menuitem">
+          <input id="period_halfweekly" name="period" type="radio" value="halfweekly" />
+          <span class="select-menu-item-icon octicon octicon-check"></span>
+          <div class="select-menu-item-text js-select-button-text">3 days</div>
+        </div>
+        <div class="select-menu-item js-navigation-item selected" role="menuitem">
+          <input checked="checked" id="period_weekly" name="period" type="radio" value="weekly" />
+          <span class="select-menu-item-icon octicon octicon-check"></span>
+          <div class="select-menu-item-text js-select-button-text">1 week</div>
+        </div>
+        <div class="select-menu-item js-navigation-item " role="menuitem">
+          <input id="period_monthly" name="period" type="radio" value="monthly" />
+          <span class="select-menu-item-icon octicon octicon-check"></span>
+          <div class="select-menu-item-text js-select-button-text">1 month</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>Contribution activity</h2>
+
+<img alt="" class="contribution-activity-spinner" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-128-338974454bb5c32803e82f601beb051d373744b024fe8742a76009700fd7e033.gif" />
+<div class="contribution-activity-listing">
+
+    <div class="blankslate">
+      <h3>octocat has no activity during this period.</h3>
+    </div>
+
+
+
+</div>
+
+  </div>
+</div><!-- /.contributions-tab -->
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          </div>
+          <div class="modal-backdrop"></div>
+        </div>
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links right">
+        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+      <li><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li><a href="http://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li><a href="http://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li><a href="/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+
+    </ul>
+
+    <a href="/" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+    </a>
+
+    <ul class="site-footer-links">
+      <li>&copy; 2015 <span title="0.08225s from github-fe126-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li><a href="/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li><a href="/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li><a href="/contact" data-ga-click="Footer, go to contact, text:contact">Contact</a></li>
+    </ul>
+  </div>
+</div>
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-suggester-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="fullscreen-contents js-fullscreen-contents" placeholder=""></textarea>
+      <div class="suggester-container">
+        <div class="suggester fullscreen-suggester js-suggester js-navigation-container"></div>
+      </div>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped tooltipped-w" aria-label="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped tooltipped-w"
+      aria-label="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="#" class="octicon octicon-x flash-close js-ajax-error-dismiss" aria-label="Dismiss error"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+
+      <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/frameworks-9643b0378c6bcb216adcdaaaa703eed77aa239aaf1c2ae44cadb2fb5099ec172.js"></script>
+      <script async="async" crossorigin="anonymous" src="https://assets-cdn.github.com/assets/github-18e60b9aac8c7c21fb47634ab0194e9f8a433423ebafc0eea0d39363aee0b8af.js"></script>
+      
+      
+
+  </body>
+</html>

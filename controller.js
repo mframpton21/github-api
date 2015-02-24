@@ -2,23 +2,39 @@ var app = angular.module('github-api');
 
 app.controller('GitHubController', function($scope, githubService) {
 
-	$scope.getUser = function () {
+	$scope.getData = function() {
+		if ($scope.searchText.toLowerCase() === "all") {
+			getUsers();
+		} else {
+			getUser($scope.searchText);
+		}
+		$scope.searchText = '';
+	};
 
-    	return githubService.getUser($scope.searchText)
+	var getUser = function(user) {
+
+    	githubService.getUser(user)
     	.then(function (data) {
 
     		console.log(data);
-        	return $scope.user = data;
+        	$scope.user = data;
         });
+
+		githubService.getUserRepos(user)
+		.then(function(data) {
+			console.log(data.data);
+      		$scope.repos = data.data;
+      		
+    	});        
     };
 
-    $scope.getUsers = function () {
+    var getUsers = function() {
 
-    	return githubService.getUsers()
+    	githubService.getUsers()
     	.then(function (data) {
 
     		console.log(data);
-        	return $scope.user = data;
+        	$scope.user = data;
         });
     };
 
